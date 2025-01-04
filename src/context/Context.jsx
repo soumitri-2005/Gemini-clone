@@ -11,21 +11,34 @@ const ContextProvider = (props) => {
   const [loading, setLoading] = useState(false); // for loading animation
   const [resultData, setResultData] = useState(""); // display the result data
 
+  // for woard by word display
   const delayPara = (index, nextWord) => {
     setTimeout(function () {
       setResultData((prev) => prev + nextWord);
     }, 75 * index);
   };
 
+  const newChat = () => {
+    setLoading(false);
+    setShowresult(false);
+  };
+
   const onSent = async (prompt) => {
     setResultData("");
     setLoading(true);
     setShowresult(true);
-    setRecentPrompt(input);
-    const response = await runChat(input);
+    let response;
+    if (prompt !== undefined) {
+      response = await runChat(prompt);
+      setRecentPrompt(prompt);
+    } else {
+      setPrevPrompts((prev) => [...prev, input]);
+      setRecentPrompt(input);
+      response = await runChat(input);
+    }
     // for text styling
     let responseArray = response.split("**");
-    let newResponse;
+    let newResponse = "";
     for (let i = 0; i < responseArray.length; i++) {
       if (i === 0 || i % 2 !== 1) {
         newResponse += responseArray[i];
@@ -54,6 +67,7 @@ const ContextProvider = (props) => {
     resultData,
     input,
     setInput,
+    newChat,
   };
 
   return (

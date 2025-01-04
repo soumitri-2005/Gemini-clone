@@ -17,33 +17,61 @@ const Main = () => {
   return (
     <div className="main">
       <div className="nav">
-        <p>Gemini</p>
-        <img src={assets.user_icon} alt="" />
+        <div>
+          <p>Gemini</p>
+        </div>
+        <div className="nav-right">
+          <div class="toggle-switch">
+            <input className="toggle-input" id="toggle" type="checkbox" />
+            <label className="toggle-label" for="toggle"></label>
+          </div>
+          <img src={assets.user_icon} alt="" />
+        </div>
       </div>
       <div className="main-container">
         {!showResult ? (
           <>
             <div className="greet">
               <p>
-                <span>Hello, Somu.</span>
+                <span>Hello, Soumitri.</span>
               </p>
               <p>How can i help you today?</p>
             </div>
             <div className="cards">
-              <div className="card">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <div
+                onClick={() =>
+                  onSent("Suggest some beautiful and royal places in India.")
+                }
+                className="card"
+              >
+                <p>Suggest some beautiful and royal places in India.</p>
                 <img src={assets.compass_icon} alt="" />
               </div>
-              <div className="card">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <div
+                onClick={() =>
+                  onSent("Easy exercises to sharp mind and healthy heart.")
+                }
+                className="card"
+              >
+                <p>Easy exercises to sharp mind and healthy heart.</p>
                 <img src={assets.bulb_icon} alt="" />
               </div>
-              <div className="card">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <div
+                onClick={() =>
+                  onSent("Write me a leave application for college.")
+                }
+                className="card"
+              >
+                <p>Write me a leave application for college.</p>
                 <img src={assets.message_icon} alt="" />
               </div>
-              <div className="card">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <div
+                onClick={() =>
+                  onSent("Give me a step by step guid to learn React easily.")
+                }
+                className="card"
+              >
+                <p>Give me a step by step guid to learn React easily.</p>
                 <img src={assets.code_icon} alt="" />
               </div>
             </div>
@@ -79,12 +107,13 @@ const Main = () => {
             <div>
               <img src={assets.gallery_icon} alt="" />
               <img src={assets.mic_icon} alt="" />
-              <img onClick={() => onSent()} src={assets.send_icon} alt="" />
+              {input ? (
+                <img onClick={() => onSent()} src={assets.send_icon} alt="" />
+              ) : null}
             </div>
           </div>
           <p className="bottom-info">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
-            nulla sequi repellat.
+            Gemini can make mistakes. Visit the help section for more info.
           </p>
         </div>
       </div>

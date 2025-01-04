@@ -10,7 +10,7 @@
 }
 
 .sidebar.extended {
-  width: 280px;
+  width: 270px;
 }
 
 .sidebar img {
@@ -36,6 +36,10 @@
   cursor: pointer;
 }
 
+.sidebar .new-chat:hover {
+  background-color: #e2e6eb;
+}
+
 .sidebar .new-chat img {
   width: 15px;
 }
@@ -43,6 +47,7 @@
 .sidebar .recent {
   display: flex;
   flex-direction: column;
+  animation: fadeIn 1.5s;
 }
 
 .sidebar .recent-title {
@@ -55,7 +60,7 @@
   align-items: start;
   gap: 10px;
   padding: 10px;
-  padding-right: 40px;
+  padding-right: 15px;
   border-radius: 50px;
   color: #282828;
   cursor: pointer;
@@ -73,4 +78,14 @@
 .sidebar .bottom-item {
   padding-right: 10px;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+.sidebar .bottom a {
+  text-decoration: none;
 }
