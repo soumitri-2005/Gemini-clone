@@ -1,8 +1,11 @@
-# React + Vite
+# Gemini clone
+It is a Google Gemini clone made with React.
+## Here i have used Gemini's API by which user can input their queries and in return they will get solution of it
+## It is responsive.
+## It has a toggle button by which user change the theme from light to dark and vice versa.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h2>
+  The project sample
+<h2/>
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Untitled design](https://github.com/user-attachments/assets/05381920-0bfa-43a2-99ad-e748d81ef755)
