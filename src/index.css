@@ -7,6 +7,37 @@
   font-family: Outfit;
 }
 
+:root {
+  --font-one-color: #585858;
+  --font-two-color: #c4c7c5;
+  --font-three-color: #282828;
+  --font-four-color: black;
+  --back-one-color: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+  --back-two-color: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+  --back-color-one-color: #f0f4f9;
+  --back-color-two-color: #dfe4ea;
+  --back-color-three-color: #e6eaf1;
+  --back-color-four-color: #e2e6eb; 
+  --back-color-five-color: white;
+  --main-img: none;
+}
+
+
+[dark-theme= 'dark'] {
+  --font-one-color: #fff;
+  --font-two-color: #c4c7c5;
+  --font-three-color: #fcfcfc;
+  --font-four-color: white;
+  --back-one-color: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+  --back-two-color: linear-gradient(to right, #205072, #8997ae, #205072);
+  --back-color-one-color: #282A2C;
+  --back-color-two-color: #4041431c;
+  --back-color-three-color: #1E1F20;
+  --back-color-four-color: #00000093;
+  --back-color-five-color: #1E1F20;
+  --main-img: invert(100%) sepia(100%) saturate(0%) hue-rotate(344deg) brightness(103%) contrast(101%);
+}
+
 #root {
   min-height: 100vh;
   display: flex;

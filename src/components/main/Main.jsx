@@ -3,7 +3,7 @@ import "./main.css";
 import { assets } from "../../assets/assets";
 import { Context } from "../../context/Context";
 
-const Main = () => {
+const Main = ({ theme, switchTheme }) => {
   const {
     onSent,
     recentPrompt,
@@ -21,10 +21,13 @@ const Main = () => {
           <p>Gemini</p>
         </div>
         <div className="nav-right">
-          <div class="toggle-switch">
-            <input className="toggle-input" id="toggle" type="checkbox" />
-            <label className="toggle-label" for="toggle"></label>
-          </div>
+          <label className={`switch ${theme}`}>
+            <input
+              type="checkbox"
+              onClick={switchTheme}
+            />
+            <span className="slider round"></span>
+          </label>
           <img src={assets.user_icon} alt="" />
         </div>
       </div>
